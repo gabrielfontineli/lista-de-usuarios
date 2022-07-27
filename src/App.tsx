@@ -17,17 +17,11 @@ const App = (props: any) => {
       .then((json) => { setUsers(json); setLoading(false) });
   }, []);
   return (
-    <div className="App">
-      <h1>Lista de usuários</h1>
-      <div className="card">
-        <List sx={{ width: '100%', maxWidth: 360 }}>
-          {users.map((user) => (
-            <ListItem key={user.id}>{user.name}</ListItem>
-          ))}
-        </List>
-
-      </div>
-    </div>
+    <List sx={{ width: '100%', maxWidth: 360 }}>
+      {users.map((user) => (
+        <ListItem key={user.id}>{user.name}</ListItem>
+      ))}
+    </List>
   );
 };
 
