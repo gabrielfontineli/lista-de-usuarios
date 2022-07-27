@@ -6,8 +6,8 @@ import { ListItem } from "@mui/material";
 
 const App = (props: any) => {
   const [users, setUsers] = useState([
-    { id: 1, name: "Minora" },
-    { id: 2, name: "Ataide" },
+    { id: 1, name: "" },
+    { id: 2, name: "" },
   ]);
   const [loading, setLoading] = useState(true);
 
@@ -15,7 +15,7 @@ const App = (props: any) => {
     fetch("https://jsonplaceholder.typicode.com/users/")
       .then((response) => response.json())
       .then((json) => { setUsers(json); setLoading(false) });
-  });
+  }, []);
   return (
     <div className="App">
       <h1>Lista de usuários</h1>
