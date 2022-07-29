@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
-import "./App.css";
-import List from "@mui/material/List";
-import { ListItem } from "@mui/material";
+import "../App.css";
+import { Box, Container, IconButton, ListItem } from "@mui/material";
+import UserList from "../components/UserList";
+import AppBar from "../components/AppBar";
+import { Height } from "@mui/icons-material";
+
 
 const App = (props: any) => {
   const [users, setUsers] = useState([
@@ -17,11 +20,13 @@ const App = (props: any) => {
       .then((json) => { setUsers(json); setLoading(false) });
   }, []);
   return (
-    <List sx={{ width: '100%', maxWidth: 360 }}>
-      {users.map((user) => (
-        <ListItem key={user.id}>{user.name}</ListItem>
-      ))}
-    </List>
+    <Box sx={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+
+      <Box className="App" >
+        <UserList users={users} />
+      </Box>
+    </Box>
+
   );
 };
 
