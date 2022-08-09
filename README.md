@@ -13,7 +13,7 @@ As tecnologias utilizadas para essa atividade foram:
 ## Como executar
 1. Para baixar o aplicativo e instalar os pacotes, no seu terminal, execute:
 ```
-git clone https://github.com/faueni/lista-de-usuarios
+git clone https://github.com/gabrielfontineli/lista-de-usuarios
 npm install
 ```
 
