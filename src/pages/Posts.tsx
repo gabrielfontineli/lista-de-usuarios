@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Box } from "@mui/material";
 
-const Posts = (props: any) => {
+const Posts = () => {
 	let params = useParams();
 
 	const [posts, setPosts] = useState([
